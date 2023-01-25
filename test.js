@@ -59,7 +59,6 @@ const strictEqualsTests = [
     result: null,
     test: null,
   },
-  ,
   {
     a: 'other false case',
     b: 'other false case1',
