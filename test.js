@@ -3,8 +3,7 @@ import { strictEquals } from './strictEquals.js';
 const strictEqualsTests = [
   { a: 1, b: 1, validResult: true, type: 'Rule', result: null, test: null },
   {
-    a: NaN,
-    b: NaN,
+    a: NaN,    b: NaN,
     validResult: false,
     type: 'Rule Exception',
     result: null,
