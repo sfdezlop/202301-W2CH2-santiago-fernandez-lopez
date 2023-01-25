@@ -51,14 +51,20 @@ const strictEqualsTests = [
     result: null,
     test: null,
   },
+  {
+    a: 'other case',
+    b: 'other case',
+    validResult: 'boolean for other case',
+    type: 'Rule for other case',
+    result: null,
+    test: null,
+  },
 ];
 
 const test = () => {
   for (let i = 0; i < strictEqualsTests.length; i++) {
-    Object.is(
-      strictEqualsTests[i].validResult,
-      strictEquals(strictEqualsTests[i].a, strictEqualsTests[i].b)
-    )
+    strictEqualsTests[i].result=strictEquals(strictEqualsTests[i].a, strictEqualsTests[i].b)
+    Object.is(strictEqualsTests[i].validResult,strictEqualsTests[i].result)
       ? (strictEqualsTests[i].test = 0)
       : (strictEqualsTests[i].test = 1);
   }
